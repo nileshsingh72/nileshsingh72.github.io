@@ -1,0 +1,124 @@
+import {
+  Box,
+  Flex,
+  HStack,
+  IconButton,
+  Button,
+  useDisclosure,
+  Stack,
+  Image,
+} from "@chakra-ui/react";
+import { HamburgerIcon, CloseIcon, AddIcon } from "@chakra-ui/icons";
+import { Link } from "react-scroll";
+
+const Links = [
+  {
+    title: "Home",
+    path: "home",
+  },
+  {
+    title: "About",
+    path: "about",
+  },
+  {
+    title: "Skills",
+    path: "skills",
+  },
+  ,
+  {
+    title: "Projects",
+    path: "projects",
+  },
+  ,
+  {
+    title: "Contact",
+    path: "contact",
+  },
+];
+
+export default function Navbar() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
+  return (
+    <>
+      <Box bg="#2B6CB0" position="fixed" width={"100%"} zIndex={10} px={4}>
+        <Flex
+          h={16}
+          alignItems={"center"}
+          // border={"1px solid red"}
+        >
+          <IconButton
+            bg="#2C5282"
+            size={"md"}
+            icon={isOpen ? <CloseIcon /> : <HamburgerIcon color={"white"} />}
+            aria-label={"Open Menu"}
+            display={{ md: "none" }}
+            onClick={isOpen ? onClose : onOpen}
+          />
+          <HStack
+            spacing={8}
+            width="100%"
+            justifyContent="space-between"
+            alignItems={"center"}
+            paddingRight="25px"
+          >
+            <Box>
+              <Image
+                src="https://txt.1001fonts.net/img/txt/dHRmLjcyLjAwMDAwMC5UbWxzWlhOby4w/allura.regular.webp"
+                alt="name"
+              />
+            </Box>
+            <HStack
+              as={"nav"}
+              spacing={1}
+              width="55%"
+              textColor="white"
+              fontFamily={("Roboto Mono", "monospace")}
+              justifyContent="space-between"
+              // border={"1px solid yellow"}
+              fontSize={{ base: "15px", md: "20px", lg: "25px" }}
+              display={{ base: "none", md: "flex" }}
+            >
+              {Links.map((link) => (
+                <Button
+                  key={link.path}
+                  bg="#4299E1"
+                  color="black"
+                  fontSize={{
+                    base: "10px",
+                    sm: "10px",
+                    md: "17px",
+                    lg: "20px",
+                  }}
+                  border={"1px solid #4299E1"}
+                >
+                  <Link
+                    color="black"
+                    smooth={true}
+                    duration={1000}
+                    to={link.path}
+                  >
+                    {link.title}
+                  </Link>
+                </Button>
+              ))}
+            </HStack>
+          </HStack>
+          <Flex alignItems={"start"}></Flex>
+        </Flex>
+
+        {isOpen ? (
+          <Box pb={4} display={{ md: "none" }}>
+            <Stack as={"nav"} spacing={4}>
+              {Links.map((link) => (
+                <Link onClick={isOpen ? onClose : onOpen} to={link.path}>
+                  {link.title}
+                </Link>
+              ))}
+            </Stack>
+          </Box>
+        ) : null}
+      </Box>
+    </>
+  );
+}
