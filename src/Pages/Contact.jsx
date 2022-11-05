@@ -97,6 +97,10 @@ export default function Contact() {
             />
           </a>
         </Box>
+        <Box></Box>
+      </Flex>
+      <Flex justify={"center"} mt={8}>
+        <Text fontWeight={700}>Design by : Nileshsingh Chauhan</Text>
       </Flex>
     </Box>
   );
