@@ -12,17 +12,17 @@ import {
 
 export default function About() {
   return (
-    <Box id="about" pt={"50px"}>
+    <Box id="about" minH={"100vh"} pt={"50px"}>
       <Flex
         fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
-        fontFamily={"Roboto Mono"}
-        color="#805AD5"
+        // fontFamily={"Roboto Mono"}
+        color="#2B6CB0"
         justify={"center"}
-        fontWeight={800}
+        fontWeight={600}
       >
         {/**/}
-        <Box borderBottom="5px dashed #805AD5" py="5px">
-          About me...{" "}
+        <Box borderBottom="5px solid #2B6CB0" py="5px">
+          About me
         </Box>
       </Flex>
 
@@ -37,8 +37,8 @@ export default function About() {
             alt={"Login Image"}
             objectFit={"cover"}
             borderRadius={"10%"}
-            border={"5px solid #4299E1"}
-            src={"https://avatars.githubusercontent.com/u/107462262?v=4"}
+            border={"2px solid black"}
+            src={"https://i.ibb.co/r2Pyd4j/croped2.png"}
           />
         </Flex>
         <Flex p={8} flex={1} align={"center"} justify={"center"}>
@@ -95,4 +95,3 @@ export default function About() {
     </Box>
   );
 }
-//checked

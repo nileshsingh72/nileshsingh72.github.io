@@ -76,18 +76,22 @@ const fadeImages = [
 export default function Projects() {
   const color = useColorModeValue("blue.300", "white");
   return (
-    <section id="projects" pt={"50px"}>
+    <Box id="projects">
+      <br />
+      <br />
+      <br />
       <Flex
-        marginBottom={"20px"}
+        marginBottom={"80px"}
+        // marginTop={"50px"}
         fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
-        fontFamily={"Roboto Mono"}
-        color="#805AD5"
+        // fontFamily={"Roboto Mono"}
+        color="#2B6CB0"
         justify={"center"}
-        fontWeight={800}
+        fontWeight={600}
       >
         {/**/}
-        <Box borderBottom="5px dashed #805AD5" py="5px">
-          My Projects...{" "}
+        <Box borderBottom="5px solid #2B6CB0" py="5px">
+          My Projects
         </Box>
       </Flex>
 
@@ -192,13 +196,13 @@ export default function Projects() {
                             alt={""}
                           ></Image>
                         </Link>
-                        <Link target={"_blank"} href={fadeImage.video}>
+                        {/* <Link target={"_blank"} href={fadeImage.video}>
                           <Image
                             pl="10px"
                             src="https://i.ibb.co/3WnfsMF/video.png"
                             alt={""}
                           ></Image>
-                        </Link>
+                        </Link> */}
                         <Link target={"_blank"} href={fadeImage.github}>
                           <Image
                             pl="10px"
@@ -215,6 +219,6 @@ export default function Projects() {
           </Fade>
         </div>
       </Box>
-    </section>
+    </Box>
   );
 }

@@ -20,17 +20,18 @@ export default function Git() {
   return (
     <>
       <Flex
+        // minH={"100vh"}
         marginBottom={"20px"}
         fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
-        fontFamily={"Roboto Mono"}
-        color="#805AD5"
+        // fontFamily={"Roboto Mono"}
+        color="#2B6CB0"
         justify={"center"}
         pt={"50px"}
-        fontWeight={800}
+        fontWeight={600}
       >
         {/**/}
-        <Box borderBottom="5px dashed #805AD5" py="5px">
-          Github Statistics...{" "}
+        <Box marginBottom={"20px"} borderBottom="5px solid #2B6CB0" py="5px">
+          Github Statistics
         </Box>
       </Flex>
       <Flex

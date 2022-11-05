@@ -8,6 +8,7 @@ import {
   Button,
   Icon,
   IconProps,
+  Image,
 } from "@chakra-ui/react";
 
 import { Typewriter } from "react-simple-typewriter";
@@ -30,8 +31,11 @@ export default function Home() {
         id="home"
         flex={1}
         px={10}
+        minH={"100vh"}
+        // height="screen"
         align="center"
         flexDirection={{ base: "column", md: "coloum", lg: "row" }}
+        // bgGradient={"linear(to-t, blue.200, white)"}
       >
         <Box w={{ base: "80%", md: "80%", lg: "50%" }}>
           <Stack
@@ -52,7 +56,7 @@ export default function Home() {
                 fontWeight={650}
                 display={"inline-border"}
               >
-                I'm
+                I'm NileshSingh Chauhan
               </Text>
               <Box h={"40px"}>
                 <Text
@@ -83,10 +87,12 @@ export default function Home() {
           </Stack>
         </Box>
         <Box w="50%" p="6%">
-          <img
-            src="https://i.ibb.co/56jVjWt/web-design-4942380-4122478-1.gif"
+          <Image
+            src="https://i.ibb.co/X8G8Z5n/web-design-4942380-4122478-2.gif"
             alt="web-design-4942380-4122478-1"
-          />
+            borderRadius={"10%"}
+            // border=
+          ></Image>
         </Box>
       </Flex>
     </>

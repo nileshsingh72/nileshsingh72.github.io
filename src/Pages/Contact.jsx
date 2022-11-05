@@ -28,155 +28,78 @@ import { BsGithub, BsDiscord, BsPerson } from "react-icons/bs";
 
 export default function Contact() {
   return (
-    <Box id="contact">
-      <Container
-        bg="#9DC4FB"
-        maxW="full"
-        mt={0}
-        centerContent
-        overflow="hidden"
-      >
-        <Flex>
-          <Box
-            bg="#02054B"
-            color="white"
-            borderRadius="lg"
-            m={{ sm: 4, md: 16, lg: 10 }}
-            p={{ sm: 5, md: 5, lg: 16 }}
-          >
-            <Box p={4}>
-              <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
-                <WrapItem>
-                  <Box>
-                    <Heading>Contact</Heading>
-                    <Text mt={{ sm: 3, md: 3, lg: 5 }} color="gray.500">
-                      Fill up the form below to contact
-                    </Text>
-                    <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
-                      <VStack pl={0} spacing={3} alignItems="flex-start">
-                        <Button
-                          size="md"
-                          height="48px"
-                          width="200px"
-                          variant="ghost"
-                          color="#DCE2FF"
-                          _hover={{ border: "2px solid #1C6FEB" }}
-                          leftIcon={<MdPhone color="#1970F1" size="20px" />}
-                        >
-                          +91-7974176492
-                        </Button>
-                        <Button
-                          size="md"
-                          height="48px"
-                          width="200px"
-                          variant="ghost"
-                          color="#DCE2FF"
-                          _hover={{ border: "2px solid #1C6FEB" }}
-                          leftIcon={<MdEmail color="#1970F1" size="20px" />}
-                        >
-                          rnileshchauhan89@gmail.com
-                        </Button>
-                        <Button
-                          size="md"
-                          height="48px"
-                          width="200px"
-                          variant="ghost"
-                          color="#DCE2FF"
-                          _hover={{ border: "2px solid #1C6FEB" }}
-                          leftIcon={
-                            <MdLocationOn color="#1970F1" size="20px" />
-                          }
-                        >
-                          Indore, India
-                        </Button>
-                      </VStack>
-                    </Box>
-                    <HStack
-                      mt={{ lg: 10, md: 10 }}
-                      spacing={5}
-                      px={5}
-                      alignItems="flex-start"
-                    >
-                      <IconButton
-                        aria-label="facebook"
-                        variant="ghost"
-                        size="lg"
-                        isRound={true}
-                        _hover={{ bg: "#0D74FF" }}
-                        icon={<MdFacebook size="28px" />}
-                      />
-                      <IconButton
-                        aria-label="github"
-                        variant="ghost"
-                        size="lg"
-                        isRound={true}
-                        _hover={{ bg: "#0D74FF" }}
-                        icon={<BsGithub size="28px" />}
-                      />
-                      <IconButton
-                        aria-label="discord"
-                        variant="ghost"
-                        size="lg"
-                        isRound={true}
-                        _hover={{ bg: "#0D74FF" }}
-                        icon={<BsDiscord size="28px" />}
-                      />
-                    </HStack>
-                  </Box>
-                </WrapItem>
-                <WrapItem>
-                  <Box bg="white" borderRadius="lg">
-                    <Box m={8} color="#0B0E3F">
-                      <VStack spacing={5}>
-                        <FormControl id="name">
-                          <FormLabel>Your Name</FormLabel>
-                          <InputGroup borderColor="#E0E1E7">
-                            <InputLeftElement
-                              pointerEvents="none"
-                              children={<BsPerson color="gray.800" />}
-                            />
-                            <Input type="text" size="md" />
-                          </InputGroup>
-                        </FormControl>
-                        <FormControl id="name">
-                          <FormLabel>Mail</FormLabel>
-                          <InputGroup borderColor="#E0E1E7">
-                            <InputLeftElement
-                              pointerEvents="none"
-                              children={<MdOutlineEmail color="gray.800" />}
-                            />
-                            <Input type="text" size="md" />
-                          </InputGroup>
-                        </FormControl>
-                        <FormControl id="name">
-                          <FormLabel>Message</FormLabel>
-                          <Textarea
-                            borderColor="gray.300"
-                            _hover={{
-                              borderRadius: "gray.300",
-                            }}
-                            placeholder="message"
-                          />
-                        </FormControl>
-                        <FormControl id="name" float="right">
-                          <Button
-                            variant="solid"
-                            bg="#0D74FF"
-                            color="white"
-                            _hover={{}}
-                          >
-                            Send Message
-                          </Button>
-                        </FormControl>
-                      </VStack>
-                    </Box>
-                  </Box>
-                </WrapItem>
-              </Wrap>
-            </Box>
-          </Box>
-        </Flex>
-      </Container>
+    <Box
+      id="contact"
+      width={"70%"}
+      margin={"auto"}
+      minH={"40vh"}
+      // paddingTop={70}
+      paddingBottom={70}
+      marginTop={5}
+      marginBottom={5}
+      // border="1px solid red"s
+    >
+      <Flex justify={"center"}>
+        <Text
+          fontSize={{ base: "20px", md: "25px", lg: "40px" }}
+          fontWeight={"600"}
+          borderBottom="5px solid #2B6CB0"
+          py="5px"
+          color="#2B6CB0"
+          marginBottom={19}
+        >
+          Get in Touch
+        </Text>
+      </Flex>
+      <Flex justify={"center"}>
+        <Text
+          fontSize={{ base: "17px", md: "20px", lg: "28px" }}
+          fontWeight={"500"}
+          color="#4299e1"
+        >
+          Nilesh Singh Chauhan
+        </Text>
+      </Flex>
+      <Flex justify={"center"}>
+        <Text
+          fontSize={{ base: "12px", md: "15px", lg: "20px" }}
+          fontWeight={"500"}
+          color="#4299e1"
+        >
+          Call: +91 7974176492
+        </Text>
+      </Flex>
+      <Flex marginTop={30} justify={"center"} gap={8}>
+        <Box>
+          <a href="https://github.com/nileshsingh72" target="_blank">
+            <img
+              width={35}
+              src="	https://cdn.iconscout.com/icon/free/png-128/github-logo-3002017-2496133.png"
+              alt=""
+            />
+          </a>
+        </Box>
+        <Box>
+          <a href="mailto: rnileshchauhan89@gmail.com" target="_blank">
+            <img
+              width={35}
+              src="	https://cdn.iconscout.com/icon/premium/png-128-thumb/mail-5689206-4761492.png"
+              alt=""
+            />
+          </a>
+        </Box>
+        <Box>
+          <a href="https://www.linkedin.com/in/nileshsingh99/" target="_blank">
+            <img
+              width={35}
+              src="	https://cdn.iconscout.com/icon/free/png-128/linkedin-logo-3002013-2496129.png"
+              alt=""
+            />
+          </a>
+        </Box>
+      </Flex>
     </Box>
   );
 }
+
+//

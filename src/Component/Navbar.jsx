@@ -66,6 +66,11 @@ export default function Navbar() {
               <Image
                 src="https://txt.1001fonts.net/img/txt/dHRmLjcyLjAwMDAwMC5UbWxzWlhOby4w/allura.regular.webp"
                 alt="name"
+                width="70%"
+                height="70%"
+                borderRadius={"20%"}
+                paddingX={3}
+                paddingY={3}
               />
             </Box>
             <HStack
@@ -80,27 +85,27 @@ export default function Navbar() {
               display={{ base: "none", md: "flex" }}
             >
               {Links.map((link) => (
-                <Button
-                  key={link.path}
-                  bg="#4299E1"
-                  color="black"
-                  fontSize={{
-                    base: "10px",
-                    sm: "10px",
-                    md: "17px",
-                    lg: "20px",
-                  }}
-                  border={"1px solid #4299E1"}
-                >
-                  <Link
+                <Link color="black" smooth={true} duration={500} to={link.path}>
+                  <Button
+                    key={link.path}
+                    bg="none"
                     color="black"
-                    smooth={true}
-                    duration={1000}
-                    to={link.path}
+                    fontSize={{
+                      base: "10px",
+                      sm: "10px",
+                      md: "17px",
+                      lg: "20px",
+                    }}
+                    _hover={{
+                      background: "white",
+                      color: "#2C5282",
+                    }}
+                    border={"1px solid grey"}
                   >
                     {link.title}
-                  </Link>
-                </Button>
+                  </Button>
+                </Link>
+                // </Button>
               ))}
             </HStack>
           </HStack>

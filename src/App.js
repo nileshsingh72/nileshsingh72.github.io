@@ -8,7 +8,7 @@ import Home from "./Pages/Home";
 import Git from "./Component/Git";
 export default function App() {
   return (
-    <div className="App">
+    <div style={{ background: "#E7F2F8" }} className="App">
       <Navbar />
       <Home />
       <About />
