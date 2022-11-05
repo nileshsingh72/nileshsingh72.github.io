@@ -52,7 +52,7 @@ export default function Home() {
                 fontWeight={650}
                 display={"inline-border"}
               >
-                I'm NileshSingh Chauhan
+                I'm
               </Text>
               <Box h={"40px"}>
                 <Text
