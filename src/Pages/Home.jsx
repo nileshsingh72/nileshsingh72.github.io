@@ -10,6 +10,7 @@ import {
   IconProps,
   Image,
 } from "@chakra-ui/react";
+import styles from "../moduleCss/Home.module.css";
 
 import { Typewriter } from "react-simple-typewriter";
 export default function Home() {
@@ -70,19 +71,25 @@ export default function Home() {
               </Box>
             </Heading>
             <Stack spacing={6} direction={"row"}>
-              <Button
-                px={8}
-                py={7}
-                fontSize="3xl"
-                color={"black"}
-                fontFamily={("Roboto Mono", "monospace")}
-                bg="#4299E1"
-                position={"static"}
-                _hover={{ bg: "#2B6CB0", color: "white" }}
+              <a
+                href="https://drive.google.com/file/d/1ypOQhWTxGYvXIKpVuF7YbOut6WLOmaC9/view?usp=sharing"
+                target="_blank"
               >
-                My Resume
-                {/* </a> */}
-              </Button>
+                <Button
+                  className={styles.btn}
+                  px={8}
+                  py={7}
+                  fontSize="3xl"
+                  color={"black"}
+                  fontFamily={("Roboto Mono", "monospace")}
+                  bg="#4299E1"
+                  position={"static"}
+                  // _hover={{ bg: "#2B6CB0", color: "white" }}
+                >
+                  My Resume
+                  {/* </a> */}
+                </Button>
+              </a>
             </Stack>
           </Stack>
         </Box>

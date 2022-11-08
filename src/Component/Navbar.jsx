@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, AddIcon } from "@chakra-ui/icons";
 import { Link } from "react-scroll";
-
+import styles from "../moduleCss/Navbar.module.css";
 const Links = [
   {
     title: "Home",
@@ -87,6 +87,8 @@ export default function Navbar() {
               {Links.map((link) => (
                 <Link color="black" smooth={true} duration={500} to={link.path}>
                   <Button
+                    className={styles.btn}
+                    // className={styles.btn - three}
                     key={link.path}
                     bg="none"
                     color="black"
@@ -97,7 +99,6 @@ export default function Navbar() {
                       lg: "20px",
                     }}
                     _hover={{
-                      background: "white",
                       color: "#2C5282",
                     }}
                     border={"1px solid grey"}

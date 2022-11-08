@@ -1,30 +1,14 @@
 import {
-  Container,
   Flex,
   Box,
-  Heading,
   Text,
-  IconButton,
   Button,
-  VStack,
-  HStack,
-  Wrap,
-  WrapItem,
   FormControl,
-  FormLabel,
   Input,
-  InputGroup,
-  InputLeftElement,
   Textarea,
+  Grid,
+  GridItem,
 } from "@chakra-ui/react";
-import {
-  MdPhone,
-  MdEmail,
-  MdLocationOn,
-  MdFacebook,
-  MdOutlineEmail,
-} from "react-icons/md";
-import { BsGithub, BsDiscord, BsPerson } from "react-icons/bs";
 
 export default function Contact() {
   return (
@@ -32,43 +16,70 @@ export default function Contact() {
       id="contact"
       width={"70%"}
       margin={"auto"}
-      minH={"40vh"}
-      // paddingTop={70}
+      minH={"90vh"}
       paddingBottom={70}
       marginTop={5}
-      marginBottom={5}
-      // border="1px solid red"s
     >
-      <Flex justify={"center"}>
-        <Text
-          fontSize={{ base: "20px", md: "25px", lg: "40px" }}
-          fontWeight={"600"}
-          borderBottom="5px solid #2B6CB0"
-          py="5px"
-          color="#2B6CB0"
-          marginBottom={19}
-        >
-          Get in Touch
-        </Text>
+      <Flex
+        marginBottom={"30px"}
+        fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
+        color="#2B6CB0"
+        justify={"center"}
+        fontWeight={600}
+      >
+        {/**/}
+        <Box borderBottom="5px solid #2B6CB0">Contact Me</Box>
       </Flex>
-      <Flex justify={"center"}>
-        <Text
-          fontSize={{ base: "17px", md: "20px", lg: "28px" }}
-          fontWeight={"500"}
-          color="#4299e1"
-        >
-          Nilesh Singh Chauhan
-        </Text>
-      </Flex>
-      <Flex justify={"center"}>
-        <Text
-          fontSize={{ base: "12px", md: "15px", lg: "20px" }}
-          fontWeight={"500"}
-          color="#4299e1"
-        >
-          Call: +91 7974176492
-        </Text>
-      </Flex>
+      <form
+        action="https://getform.io/f/b434cd75-9507-44a9-8c2e-b23c7076ae39"
+        method="POST"
+      >
+        <Grid templateColumns="repeat(2, 1fr)" gap={4}>
+          <GridItem colSpan={1}>
+            <FormControl isRequired>
+              <Input
+                padding={"30px"}
+                bg={"rgba(66, 153, 225, 0.6)"}
+                name="name"
+                placeholder="Your name"
+              />
+            </FormControl>
+          </GridItem>
+          <GridItem colSpan={1}>
+            <FormControl isRequired>
+              <Input
+                padding={"30px"}
+                name="email"
+                type="email"
+                bg={"rgba(66, 153, 225, 0.6)"}
+                placeholder="Your email"
+              />
+            </FormControl>
+          </GridItem>
+          <GridItem colSpan={2}>
+            <FormControl isRequired>
+              <Textarea
+                minH={"30vh"}
+                name="Message"
+                variant="filled"
+                bg={"rgba(66, 153, 225, 0.6)"}
+                placeholder="Your message"
+              />
+            </FormControl>
+          </GridItem>
+        </Grid>
+        <Flex justify={"center"} marginTop={5}>
+          <Button
+            type="submit"
+            px={50}
+            bg={"rgba(66, 153, 225, 0.6)"}
+            value="Submit"
+          >
+            Send
+          </Button>
+        </Flex>
+      </form>
+
       <Flex marginTop={30} justify={"center"} gap={8}>
         <Box>
           <a href="https://github.com/nileshsingh72" target="_blank">
@@ -97,13 +108,19 @@ export default function Contact() {
             />
           </a>
         </Box>
-        <Box></Box>
       </Flex>
-      <Flex justify={"center"} mt={8}>
+      <Flex justify={"center"} marginTop={"20px"}>
+        <Text
+          fontSize={{ base: "12px", md: "15px", lg: "20px" }}
+          fontWeight={"500"}
+          color="black"
+        >
+          Call: +91 7974176492
+        </Text>
+      </Flex>
+      <Flex justify={"center"}>
         <Text fontWeight={700}>Design by : Nileshsingh Chauhan</Text>
       </Flex>
     </Box>
   );
 }
-
-//
