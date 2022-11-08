@@ -38,7 +38,7 @@ export default function About() {
             objectFit={"cover"}
             borderRadius={"10%"}
             border={"2px solid black"}
-            src={"https://i.ibb.co/r2Pyd4j/croped2.png"}
+            src={"https://i.ibb.co/87QFkwz/croped2-removebg-preview.png"}
           />
         </Flex>
         <Flex p={8} flex={1} align={"center"} justify={"center"}>

@@ -11,7 +11,7 @@ import {
   Image,
 } from "@chakra-ui/react";
 import styles from "../moduleCss/Home.module.css";
-
+import Resume from "../assets/Nilesh_Singh_Chauhan_Resume.pdf";
 import { Typewriter } from "react-simple-typewriter";
 export default function Home() {
   const text = Typewriter({
@@ -72,7 +72,8 @@ export default function Home() {
             </Heading>
             <Stack spacing={6} direction={"row"}>
               <a
-                href="https://drive.google.com/file/d/1ypOQhWTxGYvXIKpVuF7YbOut6WLOmaC9/view?usp=sharing"
+                href={Resume}
+                download={"Nilesh_Singh_Chauhan_Resume"}
                 target="_blank"
               >
                 <Button
@@ -84,10 +85,8 @@ export default function Home() {
                   fontFamily={("Roboto Mono", "monospace")}
                   bg="#4299E1"
                   position={"static"}
-                  // _hover={{ bg: "#2B6CB0", color: "white" }}
                 >
                   My Resume
-                  {/* </a> */}
                 </Button>
               </a>
             </Stack>
