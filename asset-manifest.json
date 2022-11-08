@@ -1,15 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.ad1585f8.css",
-    "main.js": "/static/js/main.a9e5c9cb.js",
+    "main.js": "/static/js/main.0392552a.js",
     "static/js/787.1f11dfe9.chunk.js": "/static/js/787.1f11dfe9.chunk.js",
+    "static/media/Nilesh_Singh_Chauhan_Resume.pdf": "/static/media/Nilesh_Singh_Chauhan_Resume.d82c0a6e2a065752bd39.pdf",
     "index.html": "/index.html",
     "main.ad1585f8.css.map": "/static/css/main.ad1585f8.css.map",
-    "main.a9e5c9cb.js.map": "/static/js/main.a9e5c9cb.js.map",
+    "main.0392552a.js.map": "/static/js/main.0392552a.js.map",
     "787.1f11dfe9.chunk.js.map": "/static/js/787.1f11dfe9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ad1585f8.css",
-    "static/js/main.a9e5c9cb.js"
+    "static/js/main.0392552a.js"
   ]
 }
