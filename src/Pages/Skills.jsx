@@ -2,30 +2,34 @@ import { Box, Flex, GridItem, SimpleGrid } from "@chakra-ui/react";
 
 export default function Skills() {
   return (
-    <Box minH={"100vh"} id="skills" pt={"50px"}>
+    <Box minH={"100vh"} id="skills"    pt={"50px"}>
       <Box>
         <Flex
           marginBottom={"20px"}
           fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
-          // fontFamily={"Roboto Mono"}
-          color="#2B6CB0"
+         color={"white"}
+          fontFamily={"Franklin Gothic Medium"}
           justify={"center"}
-          fontWeight={600}
+          // fontWeight={400}
         >
           {/**/}
-          <Box borderBottom="5px solid #2B6CB0" py="5px">
+          <Box  textShadow='3px 2px red' borderBottom="3px solid white" py="5px">
             Technical Skills
           </Box>
         </Flex>
         <SimpleGrid
-          width="70%"
+          width={["50%", "70%", "70%", "70%"]}
           margin={"auto"}
           columns={{ base: 1, sm: 2, md: 3, lg: 4 }}
           gap={5}
         >
-          {/* box-shadow: ; */}
+          {/* ; */}
           <GridItem
-            boxShadow={"rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}
+            borderRadius={"12px"}
+            boxShadow={
+            "rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset"
+            }
+            bg="white" 
             py={"10%"}
             align={"center"}
           >
@@ -36,7 +40,11 @@ export default function Skills() {
             />
           </GridItem>
           <GridItem
-            boxShadow={"rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}
+            borderRadius={"12px"}
+            boxShadow={
+            "rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset"
+            }
+             bg="white" 
             py={"10%"}
             align={"center"}
           >
@@ -47,7 +55,11 @@ export default function Skills() {
             />
           </GridItem>
           <GridItem
-            boxShadow={"rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}
+            borderRadius={"12px"}
+             boxShadow={
+            "rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset"
+            }
+             bg="white" 
             py={"10%"}
             align={"center"}
             justify={"center"}
@@ -59,7 +71,11 @@ export default function Skills() {
             />
           </GridItem>
           <GridItem
-            boxShadow={"rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}
+            borderRadius={"12px"}
+             boxShadow={
+            "rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset"
+            }
+             bg="white" 
             py={"10%"}
             align={"center"}
             justify={"center"}
@@ -71,7 +87,11 @@ export default function Skills() {
             />
           </GridItem>
           <GridItem
-            boxShadow={"rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}
+            borderRadius={"12px"}
+            boxShadow={
+            "rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset"
+            }
+             bg="white" 
             py={"10%"}
             align={"center"}
             justify={"center"}
@@ -83,19 +103,28 @@ export default function Skills() {
             />
           </GridItem>
           <GridItem
-            boxShadow={"rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}
+            borderRadius={"12px"}
+             boxShadow={
+            "rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset"
+            }
+             bg="white" 
             py={"10%"}
+            pl="20px"
             align={"center"}
             justify={"center"}
           >
             <img
               width="100%"
-              src="https://www.edureka.co/blog/wp-content/uploads/2019/07/express-logo.png"
+              src="https://i.ibb.co/s150G6V/express-logo-removebg-preview.png"
               alt=""
             />
           </GridItem>
           <GridItem
-            boxShadow={"rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}
+            borderRadius={"12px"}
+            boxShadow={
+            "rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset"
+            }
+             bg="white" 
             py={"10%"}
             align={"center"}
             justify={"center"}
@@ -103,7 +132,11 @@ export default function Skills() {
             <img width="50%" src="https://i.ibb.co/X4d9v9J/nodejs.png" alt="" />
           </GridItem>
           <GridItem
-            boxShadow={"rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}
+            borderRadius={"12px"}
+             boxShadow={
+            "rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset"
+            }
+             bg="white" 
             py={"10%"}
             align={"center"}
             justify={"center"}
@@ -111,19 +144,28 @@ export default function Skills() {
             <img width="50%" src="https://i.ibb.co/3NpGM9K/git.png" alt="" />
           </GridItem>
           <GridItem
-            boxShadow={"rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}
+            borderRadius={"12px"}
+            boxShadow={
+            "rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset"
+            }
+             bg="white" 
             py={"10%"}
             align={"center"}
             justify={"center"}
           >
             <img
-              width="50%"
-              src="https://i.ibb.co/WfjsWyz/chakra-ui.png"
+              width="60%"
+              // src="https://i.ibb.co/WfjsWyz/chakra-ui.png"
+              src="https://i.ibb.co/GWCyMfQ/chakra-ui-removebg-preview.png"
               alt=""
             />
           </GridItem>
           <GridItem
-            boxShadow={"rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}
+            borderRadius={"12px"}
+             boxShadow={
+            "rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset"
+            }
+             bg="white" 
             py={"10%"}
             align={"center"}
             justify={"center"}

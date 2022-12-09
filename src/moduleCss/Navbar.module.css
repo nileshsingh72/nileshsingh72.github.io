@@ -1,5 +1,6 @@
 .btn {
-  color: #fff;
+  color: black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   transition: all 0.5s;
   position: relative;
 }

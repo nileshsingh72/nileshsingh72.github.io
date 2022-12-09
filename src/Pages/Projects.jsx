@@ -9,216 +9,149 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import React from "react";
-import { Fade } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
+import { BsEyeFill} from "react-icons/bs"
+import { FaCode } from "react-icons/fa"
+import { AiOutlineHtml5 } from "react-icons/ai"
+import { TbBrandJavascript } from "react-icons/tb"
+import { DiCss3 } from "react-icons/di"
+import { RiReactjsFill } from "react-icons/ri"
+import { SiChakraui } from "react-icons/si"
+import { DiMongodb } from "react-icons/di"
+import { IoLogoNodejs} from "react-icons/io"
+import { Expedia, indianexpress, indeed  , activitytrackerposter , weatherposter} from "../posters"
 
-const fadeImages = [
-  {
-    url: "https://assets.awwwards.com/awards/submissions/2018/12/5c0ca7e23b974.png",
-    caption: "Indian Express",
-    description:
-      "Indian Express Limited is an Indian news media publishing company.Completed project in 5 days and learned lots of new things being a part of team as a member",
-    languages: [
-      {
-        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png",
-        w: "20%",
-      },
-      {
-        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png",
-        w: "15%",
-      },
-      { src: "https://avatars3.githubusercontent.com/u/1371101?v=4", w: "20%" },
-    ],
-    github: "https://github.com/deepakkumarfathkar/Indian_Express_Clone",
-    live: "https://magenta-creponne-daa21d.netlify.app/",
-    video: "",
-  },
-  {
-    url: "https://d341ezm4iqaae0.cloudfront.net/assets/2021/10/03190032/post-job-screen-e1659553390420.jpg",
-    caption: "Indeed",
-    description:
-      "Indeed.com is an recruitment platform that provides hiring-related services to job seekers / corporates and recruiters. Completed project in 5 days and learned lots of new things.",
-    languages: [
-      {
-        src: "https://cdn1.iconfinder.com/data/icons/programing-development-8/24/react_logo-512.png",
-        w: "20%",
-      },
-      {
-        src: "https://jquery-plugins.net/image/plugin/chakra-ui-simple-modular-accessible-ui-components-for-react-applications.png",
-        w: "35%",
-      },
-    ],
-    github: "https://github.com/nileshsingh72/Clone-Indeed.com",
-    live: "https://strong-souffle-576a35.netlify.app/",
-    video: "",
-  },
-  {
-    url: "https://viatravelers.com/wp-content/uploads/2021/05/Expedia-Hotels.jpg.webp",
-    caption: "Expedia",
-    description:
-      "An American online travel shopping company for consumer and also provides Vacation offers. Completed project in 6 days. Used Authentication login page.",
-    languages: [
-      {
-        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png",
-        w: "20%",
-      },
-      {
-        src: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png",
-        w: "15%",
-      },
-      { src: "https://avatars3.githubusercontent.com/u/1371101?v=4", w: "20%" },
-    ],
-    github: "https://github.com/nileshsingh72/Clone-Expedia.com",
-    live: "https://expedia-three.vercel.app",
-    video: "",
-  },
-];
+const myarray = [
+    {
+      project: "IndianExpress.com (Collaborative)",
+      url: indianexpress,
+      description:
+        "Indian Express Limited is an Indian news media publishing company.Completed in 5 days and learned lots of new things being a part of team as a member",
+      
+      github: "https://github.com/deepakkumarfathkar/Indian_Express_Clone",
+      live: "https://magenta-creponne-daa21d.netlify.app/",
+      video: "",
+      stacks: [<AiOutlineHtml5/> , <DiCss3/> ,<TbBrandJavascript/>]
+    },
+    {
+      project: "Indeed.com (Indiviual)",
+      url: indeed,
+      description:
+        "Indeed.com is an recruitment platform that provides hiring-related services to job seekers, corporates and recruiters. Completed in 5 days and learned lots of new things.",
+      github: "https://github.com/nileshsingh72/Clone-Indeed.com",
+      live: "https://strong-souffle-576a35.netlify.app/",
+      video: "",
+     stacks: [  <AiOutlineHtml5/> , <DiCss3/> , <TbBrandJavascript/> , <SiChakraui/> , <RiReactjsFill /> ]
+
+
+    },
+    {
+      project: "Expedia.com (Indiviual)",
+      url: Expedia,
+      description:
+        "An American online travel shopping company for consumer and also provides Vacation offers. Completed in 6 days. Used Authentication login page.",
+      github: "https://github.com/nileshsingh72/Clone-Expedia.com",
+      live: "https://expedia-three.vercel.app",
+      video: "",
+      stacks: [<AiOutlineHtml5/> , <DiCss3/> ,<TbBrandJavascript/>]
+
+
+    },
+    {
+      project: "ActivityTracker.com (Collaborative)",
+      url: activitytrackerposter,
+      caption: "ActivityTracker",
+      description:
+        "It is a desktop and mobile time tracking app for companies and freelancers to measure their work productivity. Completed in 5 days.",
+      github: "https://github.com/Faizan7012/frightening-river-6696",
+      live: "https://activity-tracker-orpin.vercel.app/",
+      video: "",
+      stacks: [ <TbBrandJavascript/> , <SiChakraui/> , <RiReactjsFill /> , <DiMongodb  /> , <IoLogoNodejs/>]
+
+    },
+     {
+      project: "Weather-App (Indiviual)",
+      url: weatherposter,
+      description:
+        "It is my first project, weather app used OpenWeatherMap Api's, shows dynamic time and weather of cities",
+      github: "https://github.com/nileshsingh72/WeatherApp",
+      live: "https://weatherapp-seven-gamma.vercel.app/",
+      video: "",
+      stacks: [<AiOutlineHtml5/> , <DiCss3/> ,<TbBrandJavascript/>]
+
+
+    },
+  ];
 export default function Projects() {
+  return (
+    <>
+      <Box id="projects">
+        <br />
+        <br />
+        <br />
+        <Flex
+          marginBottom={"80px"}
+          fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
+          color={"white"}
+          fontFamily={"Franklin Gothic Medium"}
+          justify={"center"}
+        >
+          {/**/}
+          <Box   textShadow='3px 2px red' borderBottom="3px solid white" py="5px">
+            My Projects
+          </Box>
+        </Flex>
+        {/* <Project_Card /> */}
+
+<Grid templateColumns={['repeat(1, 1fr)' , 'repeat(1, 1fr)' , 'repeat(2, 1fr)' , 'repeat(3, 1fr)']} gap={6}>
+ {myarray.map((el , i) => (
+   <GridItem  ><Box key={i} 
+   boxShadow = "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;"
+   w="320px" bg="white"  m="auto"   p="15px"  borderRadius={"7px"}
+   _hover={{
+    transform:"scale(1.05)" , 
+    transition:'0.3s ease-in-out'
+   }}
+   >
+        <Flex  flexDirection={"column"} alignItems={"center"}  gap={4} >
+          <Image  border={"1px solid black"}   borderRadius="6px" src={el.url} />
+        <Text  textAlign={"center"}  color="black" fontSize={"22px"} >{el.project} </Text>
+        
+        <Text  textAlign={"center"} color="black" mt="-8px" > {el.description}</Text>
+        <Flex  alignItems={"center"} >
+          Tech Stacks : 
+          <Flex  fontSize={"35px"}  
+        // border={"1px solid black"} gap={3} 
+        >
+          {el.stacks?.map(element=> element)}
+        </Flex>
+        </Flex>
+        
+        <Flex  gap={3} fontSize={"25px"}  w="60%"   justifyContent={"space-around"} >
+          <Link   target={"_blank"} href={el.live} >
+          <BsEyeFill  
+          />
+          </Link>
+           <Link   target={"_blank"}href={el.github} > 
+          <FaCode/>
+          </Link>
+
+        </Flex>
+        </Flex>
+
+      </Box></ GridItem>
+ ))}
+</Grid>
+        
+      </Box>
+    </>
+  );
+}
+function Project() {
   const color = useColorModeValue("blue.300", "white");
   return (
     <Box id="projects">
-      <br />
-      <br />
-      <br />
-      <Flex
-        marginBottom={"80px"}
-        // marginTop={"50px"}
-        fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
-        // fontFamily={"Roboto Mono"}
-        color="#2B6CB0"
-        justify={"center"}
-        fontWeight={600}
-      >
-        {/**/}
-        <Box borderBottom="5px solid #2B6CB0" py="5px">
-          My Projects
-        </Box>
-      </Flex>
-
-      <Box
-        m="auto"
-        margin={{ base: "auto auto", sm: "auto auto", md: "auto 10%" }}
-        mt="50px"
-      >
-        <div className="slide-container">
-          <Fade>
-            {fadeImages.map((fadeImage, index) => (
-              <div className="each-fade" key={index}>
-                <div
-                  style={{ textAlign: "center" }}
-                  className="image-container"
-                >
-                  <Grid
-                    // border="2px solid red"
-                    border={"5px solid #4299E1"}
-                    w={"90%"}
-                    templateColumns={{
-                      base: "100%",
-                      sm: "100%",
-                      md: "50% 50%",
-                    }}
-                    alignItems="center"
-                    m="auto"
-                    borderRadius="20px"
-                    boxShadow="rgba(149, 157, 165, 0.2) 0px 8px 24px"
-                  >
-                    <GridItem
-                      // border="2px solid  brown"
-
-                      m="auto 10px"
-                      placeItems={"center"}
-                    >
-                      <Link
-                        target={"_blank"}
-                        href={fadeImage.live}
-                        alt={fadeImage.caption}
-                      >
-                        <Flex align={"center"} justify={"center"}>
-                          <Image
-                            w={{ base: "400px", sm: "400px", md: "500px" }}
-                            src={fadeImage.url}
-                            alt={fadeImage.caption}
-                          />
-                        </Flex>
-                      </Link>
-                    </GridItem>
-                    <GridItem
-                      // border="2px solid brown"
-                      w="90%"
-                      m="auto"
-                    >
-                      <Text
-                        fontSize={"4xl"}
-                        color="black"
-                        as="b"
-                      >{`${fadeImage.caption}.com`}</Text>
-                      <br />
-                      <Text
-                        fontSize={{ base: "md", md: "20px", lg: "23px" }}
-                        color={"#2B6CB0"}
-                        textAlign="start"
-                        fontWeight={"600"}
-                        fontFamily={"Franklin Gothic Medium"}
-                      >
-                        {fadeImage.description}
-                      </Text>
-                      <br />
-                      <Flex
-                        m="auto"
-                        justify={"space-between"}
-                        align="center"
-                        w="80%"
-                        // border={"1px solid red"}
-                      >
-                        <Text
-                          as="b"
-                          fontSize={{ base: "md", md: "20px", lg: "23px" }}
-                          color="black"
-                        >
-                          Tech Stacks:{" "}
-                        </Text>
-                        {fadeImage.languages.map((img, index) => {
-                          return (
-                            <img width={img.w} key={index} src={img.src} />
-                          );
-                        })}
-                      </Flex>
-                      <br />
-                      <Flex
-                        mb="50px"
-                        justifyContent={"center"}
-                        alignItems={"center"}
-                      >
-                        <Link target={"_blank"} href={fadeImage.live}>
-                          <Image
-                            pl="10px"
-                            src="https://i.ibb.co/vsw8tWb/website.png"
-                            alt={""}
-                          ></Image>
-                        </Link>
-                        {/* <Link target={"_blank"} href={fadeImage.video}>
-                          <Image
-                            pl="10px"
-                            src="https://i.ibb.co/3WnfsMF/video.png"
-                            alt={""}
-                          ></Image>
-                        </Link> */}
-                        <Link target={"_blank"} href={fadeImage.github}>
-                          <Image
-                            pl="10px"
-                            src="https://i.ibb.co/ZLskdcS/githube.png"
-                            alt={""}
-                          ></Image>
-                        </Link>
-                      </Flex>
-                    </GridItem>
-                  </Grid>
-                </div>
-              </div>
-            ))}
-          </Fade>
-        </div>
-      </Box>
+      
     </Box>
   );
 }

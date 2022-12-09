@@ -1,17 +1,7 @@
-import {
-  Flex,
-  Box,
-  Container,
-  Heading,
-  Stack,
-  Text,
-  Button,
-  Icon,
-  IconProps,
-  Image,
-} from "@chakra-ui/react";
+import { Flex, Box, Text, Image, Link, Button } from "@chakra-ui/react";
 import styles from "../moduleCss/Home.module.css";
 import Resume from "../assets/Nilesh_Singh_Chauhan_Resume.pdf";
+import { FiDownload } from "react-icons/fi";
 import { Typewriter } from "react-simple-typewriter";
 export default function Home() {
   const text = Typewriter({
@@ -24,83 +14,93 @@ export default function Home() {
   });
 
   return (
-    <>
-      <br />
-      <br />
-
+    <Box 
+    w="100%"
+    >
       <Flex
+        minH={["auto", "auto", "70vh", "70vh"]}
+        alignContent="center"
+        justifyContent={"space-between"}
         id="home"
-        flex={1}
-        px={10}
-        minH={"100vh"}
-        // height="screen"
-        align="center"
-        flexDirection={{ base: "column", md: "coloum", lg: "row" }}
-        // bgGradient={"linear(to-t, blue.200, white)"}
+        w={["80%", "70%", "70%", "80%"]}
+        m="auto"
+            color={"white"}
+
+        flexDirection={["column", "column", "column", "row"]}
+       
       >
-        <Box w={{ base: "80%", md: "80%", lg: "50%" }}>
-          <Stack
-            textAlign={"center"}
-            align={"center"}
-            spacing={{ base: 8, md: 10 }}
-            py={{ base: 20, md: 28 }}
-            // border={"1px solid red"}
+        <Flex
+          py="17%"
+          mt={["20px", "20px", "0", "0"]}
+          w={["100%", "100%", "100%", "56%"]}
+          px="10px"
+          alignItems={"center"}
+          // border="1px solid red"
+          fontFamily={"Franklin Gothic Medium"}
+          flexDirection={"column"}
+          gap={["12px", "16px", "18px", "25px"]}
+        >
+          <Text
+            mt={["15px", "0px", "0px", "0px"]}
+            textAlign={"left"}
+            // color={"#9B2C2C"}
+            fontSize={["22px", "28px", "33px"]}
           >
-            <Heading
-              fontWeight={600}
-              fontSize={{ base: "3xl", sm: "4xl", md: "6xl" }}
-              lineHeight={"120%"}
+            Hii,{" "}
+          </Text>
+          <Text
+            textAlign={"center"}
+            fontSize={["20px", "26px", "40px"]}
+            // color={"#9B2C2C"}
+            color={"white"}
+          >
+            Nilesh Singh Chauhan
+          </Text>
+          <Box h="25px">
+            <Text
+              textAlign={"center"}
+              fontSize={["17px", "24px", "26px"]}
+              textShadow="0.5px 0.5px red"
+              color={"black"}
             >
-              Hi,{"  "}
-              <Text
-                color={"#2C5282"}
-                fontWeight={650}
-                display={"inline-border"}
-              >
-                I'm NileshSingh Chauhan
-              </Text>
-              <Box h={"40px"}>
-                <Text
-                  color={"#805AD5"}
-                  fontWeight={800}
-                  fontFamily="monospace"
-                  fontSize={{ base: "1xl", sm: "2xl", md: "4xl" }}
-                >
-                  {text}
-                </Text>
-              </Box>
-            </Heading>
-            <Stack spacing={6} direction={"row"}>
-              <a
-                href={Resume}
-                download={"Nilesh_Singh_Chauhan_Resume"}
-                target="_blank"
-              >
-                <Button
-                  className={styles.btn}
-                  px={8}
-                  py={7}
-                  fontSize="3xl"
-                  color={"black"}
-                  fontFamily={("Roboto Mono", "monospace")}
-                  bg="#4299E1"
-                  position={"static"}
-                >
-                  My Resume
-                </Button>
-              </a>
-            </Stack>
-          </Stack>
-        </Box>
-        <Box w="50%" p="6%">
-          <Image
-            src="https://i.ibb.co/X8G8Z5n/web-design-4942380-4122478-2.gif"
-            alt="web-design-4942380-4122478-1"
-            borderRadius={"10%"}
-            // border=
-          ></Image>
-        </Box>
+              {text}
+            </Text>
+          </Box>
+          <Link
+            mt={["15px", "15px", "18px", "20px"]}
+            href="https://drive.google.com/file/d/1ypOQhWTxGYvXIKpVuF7YbOut6WLOmaC9/view?usp=sharing"
+            target="_blank"
+          >
+            <Flex
+              gap="2"
+              py="3px"
+              px="10px"
+              borderRadius={"5px"}
+              justifyContent={"space-between"}
+              alignItems={"center"}
+              _hover={{
+                bg: "",
+                border: "2px solid  black",
+                fontSize: "26px",
+              }}
+              fontSize={["14px", "18px", "22px", "22px"]}
+              // color={"blackAlpha.800"}
+              bg="#FC8181"
+            >
+              My Resume
+              <FiDownload />
+            </Flex>
+          </Link>
+        </Flex>
+        <Flex
+          w={["100%", "100%", "100%", "44%"]}
+          justifyContent={"center"}
+          alignItems="center"
+          // border="1px solid brown"
+        >
+          <Image src="https://i.ibb.co/18jVdfy/web-development-4518781-3743936.gif" />
+        </Flex>
       </Flex>
-    </>
+    </Box>
   );
 }

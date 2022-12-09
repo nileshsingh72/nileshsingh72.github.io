@@ -6,7 +6,7 @@ import {
   Button,
   useDisclosure,
   Stack,
-  Image,
+  Avatar,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, AddIcon } from "@chakra-ui/icons";
 import { Link } from "react-scroll";
@@ -41,7 +41,16 @@ export default function Navbar() {
 
   return (
     <>
-      <Box bg="#2B6CB0" position="fixed" width={"100%"} zIndex={10} px={4}>
+      <Box
+      // className="navcol"
+        bg="black"
+        position="fixed"
+        width={"100%"}
+        zIndex={10}
+        px={4}
+        boxShadow="rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;"
+        pb="5px"
+      >
         <Flex
           h={16}
           alignItems={"center"}
@@ -62,8 +71,8 @@ export default function Navbar() {
             alignItems={"center"}
             paddingRight="25px"
           >
-            <Box>
-              <Image
+            <Link to="home" smooth={true} duration={1000}>
+              {/* <Image
                 src="https://txt.1001fonts.net/img/txt/dHRmLjcyLjAwMDAwMC5UbWxzWlhOby4w/allura.regular.webp"
                 alt="name"
                 width="70%"
@@ -71,40 +80,45 @@ export default function Navbar() {
                 borderRadius={"20%"}
                 paddingX={3}
                 paddingY={3}
-              />
-            </Box>
+              /> */}
+              {/* <Avatar src="https://avatars.githubusercontent.com/u/107462262?v=4" /> */}
+              <Avatar ml="25px" src="https://i.ibb.co/yWrWZT3/avatarme.png" />
+            </Link>
             <HStack
               as={"nav"}
               spacing={1}
               width="55%"
               textColor="white"
-              fontFamily={("Roboto Mono", "monospace")}
+              fontFamily={"sans-serif"}
               justifyContent="space-between"
               // border={"1px solid yellow"}
               fontSize={{ base: "15px", md: "20px", lg: "25px" }}
               display={{ base: "none", md: "flex" }}
             >
               {Links.map((link) => (
-                <Link color="black" smooth={true} duration={500} to={link.path}>
-                  <Button
+                <Link smooth={true}
+                color = "white"
+                duration={500} to={link.path}>
+                  {/* <Button
                     className={styles.btn}
-                    // className={styles.btn - three}
                     key={link.path}
+                      
+
                     bg="none"
-                    color="black"
                     fontSize={{
                       base: "10px",
                       sm: "10px",
                       md: "17px",
                       lg: "20px",
                     }}
-                    _hover={{
-                      color: "#2C5282",
-                    }}
+                    // _hover={{
+                    //   fontSize: "25px",
+                    //   wordSpacing: "10px",
+                    // }}
                     border={"1px solid grey"}
-                  >
+                  > */}
                     {link.title}
-                  </Button>
+                  {/* </Button> */}
                 </Link>
                 // </Button>
               ))}

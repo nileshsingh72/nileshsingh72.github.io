@@ -3,124 +3,169 @@ import {
   Box,
   Text,
   Button,
+  VStack,
   FormControl,
+  FormLabel,
   Input,
+  InputGroup,
+  InputLeftElement,
   Textarea,
-  Grid,
-  GridItem,
 } from "@chakra-ui/react";
+import { Grid, GridItem } from "@chakra-ui/react";
+import { HiMail } from "react-icons/hi";
+import { BsGithub, BsPerson, BsLinkedin } from "react-icons/bs";
+import {
+  MdOutlineEmail,
+} from "react-icons/md";
 
 export default function Contact() {
   return (
-    <Box
+    <Flex
+      flexDirection={"column"}
       id="contact"
-      width={"70%"}
+      px="15%"
+      width={"100%"}
       margin={"auto"}
-      minH={"90vh"}
-      paddingBottom={70}
-      marginTop={5}
+      justify="center"
+     
     >
       <Flex
-        marginBottom={"30px"}
+        marginTop={30}
+        marginBottom={"10px"}
         fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
-        color="#2B6CB0"
+        color={"white"}
         justify={"center"}
-        fontWeight={600}
+          fontFamily={"Franklin Gothic Medium"}
+
       >
         {/**/}
-        <Box borderBottom="5px solid #2B6CB0">Contact Me</Box>
+        <Box   textShadow='3px 2px red' borderBottom="3px solid white">Contact Me</Box>
       </Flex>
       <form
         action="https://getform.io/f/b434cd75-9507-44a9-8c2e-b23c7076ae39"
         method="POST"
       >
-        <Grid templateColumns="repeat(2, 1fr)" gap={4}>
-          <GridItem colSpan={1}>
-            <FormControl isRequired>
-              <Input
-                padding={"30px"}
-                bg={"rgba(66, 153, 225, 0.6)"}
-                name="name"
-                placeholder="Your name"
-              />
-            </FormControl>
-          </GridItem>
-          <GridItem colSpan={1}>
-            <FormControl isRequired>
-              <Input
-                padding={"30px"}
-                name="email"
-                type="email"
-                bg={"rgba(66, 153, 225, 0.6)"}
-                placeholder="Your email"
-              />
-            </FormControl>
-          </GridItem>
-          <GridItem colSpan={2}>
-            <FormControl isRequired>
-              <Textarea
-                minH={"30vh"}
-                name="Message"
-                variant="filled"
-                bg={"rgba(66, 153, 225, 0.6)"}
-                placeholder="Your message"
-              />
-            </FormControl>
-          </GridItem>
-        </Grid>
-        <Flex justify={"center"} marginTop={5}>
-          <Button
-            type="submit"
-            px={50}
-            bg={"rgba(66, 153, 225, 0.6)"}
-            value="Submit"
-          >
-            Send
-          </Button>
-        </Flex>
+        <Box
+          m="auto"
+          w={["100%", "90%", "70%", "70%"]}
+        bg="black"
+        boxShadow ="rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset"
+        p="10px"
+          borderRadius="lg"
+        >
+          <Box m={5} color="#0B0E3F">
+            <VStack  color={"white"}  spacing={3}>
+              <FormControl id="name">
+                <FormLabel
+                  fontSize={["16px", "18px", "20px", "20px"]}
+                  
+                >
+                  Your Name
+                </FormLabel>
+                <InputGroup borderColor="blue.500">
+                  <InputLeftElement
+                    pointerEvents="none"
+                    children={<BsPerson color="gray.800" />}
+                  />
+                  <Input name="Name" type="text" size="md" />
+                </InputGroup>
+              </FormControl>
+              <FormControl id="name">
+                <FormLabel
+                  fontSize={["16px", "18px", "20px", "20px"]}
+                  
+                >
+                  Mail
+                </FormLabel>
+                <InputGroup borderColor="blue.500">
+                  <InputLeftElement
+                    pointerEvents="none"
+                    children={<MdOutlineEmail color="gray.800" />}
+                  />
+                  <Input name="Mail" type="email" size="md" />
+                </InputGroup>
+              </FormControl>
+              <FormControl id="name">
+                <FormLabel
+                  fontSize={["16px", "18px", "20px", "20px"]}
+                  
+                >
+                  Message
+                </FormLabel>
+                <Textarea
+                  name="Message"
+                  borderColor="blue.500"
+                  _hover={{
+                    borderRadius: "gray.300",
+                  }}
+                  placeholder="Write here"
+                />
+              </FormControl>
+              <FormControl id="name" float="right">
+                <Button
+                  type="submit"
+                  className="btn-5"
+                  color={"black"}
+                >
+                  Send Message
+                </Button>
+              </FormControl>
+            </VStack>
+          </Box>
+        </Box>
       </form>
 
-      <Flex marginTop={30} justify={"center"} gap={8}>
-        <Box>
-          <a href="https://github.com/nileshsingh72" target="_blank">
-            <img
-              width={35}
-              src="	https://cdn.iconscout.com/icon/free/png-128/github-logo-3002017-2496133.png"
-              alt=""
-            />
-          </a>
-        </Box>
-        <Box>
-          <a href="mailto: rnileshchauhan89@gmail.com" target="_blank">
-            <img
-              width={35}
-              src="	https://cdn.iconscout.com/icon/premium/png-128-thumb/mail-5689206-4761492.png"
-              alt=""
-            />
-          </a>
-        </Box>
-        <Box>
-          <a href="https://www.linkedin.com/in/nileshsingh99/" target="_blank">
-            <img
-              width={35}
-              src="	https://cdn.iconscout.com/icon/free/png-128/linkedin-logo-3002013-2496129.png"
-              alt=""
-            />
-          </a>
-        </Box>
-      </Flex>
-      <Flex justify={"center"} marginTop={"20px"}>
-        <Text
-          fontSize={{ base: "12px", md: "15px", lg: "20px" }}
-          fontWeight={"500"}
-          color="black"
-        >
-          Call: +91 7974176492
-        </Text>
-      </Flex>
-      <Flex justify={"center"}>
-        <Text fontWeight={700}>Design by : Nileshsingh Chauhan</Text>
-      </Flex>
-    </Box>
+      {/* */}
+      <Grid
+        w="60%"
+        m="auto"
+        templateColumns="repeat(1, 1fr)"
+        gap={1}
+        mt="-60px"
+      >
+        <GridItem colSpan={1}>
+          <Flex marginTop="80px" color={"lightgreen"}  justify={"center"} gap={8}>
+            <Box>
+              <a href="https://github.com/nileshsingh72" target="_blank">
+                <BsGithub
+                  fontSize={"30px"}
+                />
+              </a>
+            </Box>
+            <Box>
+              <a href="mailto: rnileshchauhan89@gmail.com" target="_blank">
+                <HiMail
+                  fontSize={"30px"}
+                />
+              </a>
+            </Box>
+            <Box>
+              <a
+                href="https://www.linkedin.com/in/nileshsingh99/"
+                target="_blank"
+              >
+                <BsLinkedin
+                  fontSize={"30px"}
+                />
+              </a>
+            </Box>
+          </Flex>
+        </GridItem>
+        <GridItem color={"lightgreen"}   textShadow="1px 2px black" colSpan={1}>
+          <Flex flexDirection={"column"} justify={"center"}>
+            <Text
+              textAlign={"center"}
+              fontSize={{ base: "16px", md: "18px", lg: "20px" }}
+              fontWeight={"500"}
+            >
+              Call: +91 7974176492
+            </Text>
+            <Text textAlign={"center"} fontWeight={700}>
+              Design by : Nileshsingh Chauhan
+            </Text>
+          </Flex>
+        </GridItem>
+      </Grid>
+    </Flex>
   );
 }

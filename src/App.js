@@ -6,10 +6,12 @@ import Skills from "./Pages/Skills";
 import Contact from "./Pages/Contact";
 import Home from "./Pages/Home";
 import Git from "./Component/Git";
+import { Stack } from "@chakra-ui/react";
 export default function App() {
   return (
-    <div style={{ background: "#E7F2F8" }} className="App">
-      <Navbar />
+    // #FFF5F5
+    <div id="colorB" className="App">
+      <Navbar />  
       <Home />
       <About />
       <Skills />
