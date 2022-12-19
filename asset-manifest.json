@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.e5ffd8f4.css",
-    "main.js": "/static/js/main.dc5d0050.js",
+    "main.js": "/static/js/main.5f8addc1.js",
     "static/media/elegant.png": "/static/media/elegant.d9c2265dadc7a60903d4.png",
     "static/media/indianexpressposterfinal.png": "/static/media/indianexpressposterfinal.c13f737b24d905f8ddff.png",
     "static/media/activitytrackerposter.png": "/static/media/activitytrackerposter.d8300fe98c28006e84a5.png",
@@ -10,10 +10,10 @@
     "static/media/indeedposterfinal.png": "/static/media/indeedposterfinal.8b50833f75b607d9ae00.png",
     "index.html": "/index.html",
     "main.e5ffd8f4.css.map": "/static/css/main.e5ffd8f4.css.map",
-    "main.dc5d0050.js.map": "/static/js/main.dc5d0050.js.map"
+    "main.5f8addc1.js.map": "/static/js/main.5f8addc1.js.map"
   },
   "entrypoints": [
     "static/css/main.e5ffd8f4.css",
-    "static/js/main.dc5d0050.js"
+    "static/js/main.5f8addc1.js"
   ]
 }
