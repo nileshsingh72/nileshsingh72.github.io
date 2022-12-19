@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.64f01e7c.css",
-    "main.js": "/static/js/main.2cb6cf37.js",
-    "static/media/weatherposter.png": "/static/media/weatherposter.633781adbecaa175a08f.png",
+    "main.css": "/static/css/main.e5ffd8f4.css",
+    "main.js": "/static/js/main.c4d4f7b7.js",
+    "static/media/elegant.png": "/static/media/elegant.d9c2265dadc7a60903d4.png",
     "static/media/indianexpressposterfinal.png": "/static/media/indianexpressposterfinal.c13f737b24d905f8ddff.png",
     "static/media/activitytrackerposter.png": "/static/media/activitytrackerposter.d8300fe98c28006e84a5.png",
     "static/media/expediaposterfinal.png": "/static/media/expediaposterfinal.88743c41969758d20557.png",
-    "static/media/Nilesh_Singh_Chauhan_Resume.pdf": "/static/media/Nilesh_Singh_Chauhan_Resume.d82c0a6e2a065752bd39.pdf",
+    "static/media/Nilesh-Singh-Chauhan-Resume.pdf": "/static/media/Nilesh-Singh-Chauhan-Resume.1a3b2e41beb1e7d7b704.pdf",
     "static/media/indeedposterfinal.png": "/static/media/indeedposterfinal.8b50833f75b607d9ae00.png",
     "index.html": "/index.html",
-    "main.64f01e7c.css.map": "/static/css/main.64f01e7c.css.map",
-    "main.2cb6cf37.js.map": "/static/js/main.2cb6cf37.js.map"
+    "main.e5ffd8f4.css.map": "/static/css/main.e5ffd8f4.css.map",
+    "main.c4d4f7b7.js.map": "/static/js/main.c4d4f7b7.js.map"
   },
   "entrypoints": [
-    "static/css/main.64f01e7c.css",
-    "static/js/main.2cb6cf37.js"
+    "static/css/main.e5ffd8f4.css",
+    "static/js/main.c4d4f7b7.js"
   ]
 }
