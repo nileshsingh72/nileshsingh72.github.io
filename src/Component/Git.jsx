@@ -25,26 +25,29 @@ export default function Git() {
         justify={"center"}
         pt={"50px"}
         color={"white"}
-          fontFamily={"Franklin Gothic Medium"}
-
+        fontFamily={"Franklin Gothic Medium"}
       >
-        <Box    textShadow='3px 2px red' borderBottom="3px solid white" marginBottom={"20px"}   py="5px">
+        <Box
+          textShadow="3px 2px red"
+          borderBottom="3px solid white"
+          marginBottom={"20px"}
+          py="5px"
+        >
           Github Statistics
         </Box>
       </Flex>
       <Grid templateColumns="repeat(2, 1fr)" w="70%" m="auto" gap={2}>
         <GridItem colSpan={2}>
-          <Flex color={"white"} justifyContent={"center"} w="full"  >
-            <GitHubCalendar     username="nileshsingh72" transformData={calender} />
+          <Flex color={"white"} justifyContent={"center"} w="full">
+            <GitHubCalendar username="nileshsingh72" transformData={calender} />
           </Flex>
         </GridItem>
-        <GridItem 
-        colSpan={["2", "2", "1", "1"]}>
+        <GridItem colSpan={["2", "2", "1", "1"]}>
           <img
             height="200px"
             // width={"49%"}
             color="black"
-            src="https://github-readme-stats.vercel.app/api?username=nileshsingh72&show_icons=true&theme=swift"
+            src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=nileshsingh72&hide_border=true&hide_border=true"
             alt="nilesh"
           />
         </GridItem>
@@ -60,43 +63,3 @@ export default function Git() {
     </>
   );
 }
-
-// <Flex justify={"center"}>
-//   <Flex flexDirection={"column"} align="center">
-//     <Flex border="2px solid red" justify={"center"} width="100%">
-//       {" "}
-//       <GitHubCalendar username="nileshsingh72" transformData={calender} />
-//       {/* <img
-//               //   height="200px"
-//               src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=nileshsingh72"
-//             /> */}
-//     </Flex>
-//     <Flex
-//       w="80%"
-//       border="2px solid red"
-//       justify={"center"}
-//       align={"center"}
-//       flexDirection={{
-//         base: "column",
-//         sm: "column",
-//         md: "column",
-//         lg: "row",
-//       }}
-//     >
-//       <img
-//         height="200px"
-//         // width={"49%"}
-//         color="black"
-//         src="https://github-readme-stats.vercel.app/api?username=nileshsingh72&show_icons=true&theme=swift"
-//         alt="nilesh"
-//       />
-
-//       <img
-//         height="200px"
-//         // width={"49%"}
-//         src="https://github-readme-streak-stats.herokuapp.com/?user=nileshsingh72&theme=swift"
-//         alt="nilesh"
-//       />
-//     </Flex>
-//   </Flex>
-// </Flex>;

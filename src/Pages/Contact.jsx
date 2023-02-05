@@ -14,9 +14,7 @@ import {
 import { Grid, GridItem } from "@chakra-ui/react";
 import { HiMail } from "react-icons/hi";
 import { BsGithub, BsPerson, BsLinkedin } from "react-icons/bs";
-import {
-  MdOutlineEmail,
-} from "react-icons/md";
+import { MdOutlineEmail } from "react-icons/md";
 
 export default function Contact() {
   return (
@@ -27,7 +25,6 @@ export default function Contact() {
       width={"100%"}
       margin={"auto"}
       justify="center"
-     
     >
       <Flex
         marginTop={30}
@@ -35,11 +32,12 @@ export default function Contact() {
         fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
         color={"white"}
         justify={"center"}
-          fontFamily={"Franklin Gothic Medium"}
-
+        fontFamily={"Franklin Gothic Medium"}
       >
         {/**/}
-        <Box   textShadow='3px 2px red' borderBottom="3px solid white">Contact Me</Box>
+        <Box textShadow="3px 2px red" borderBottom="3px solid white">
+          Contact Me
+        </Box>
       </Flex>
       <form
         action="https://getform.io/f/b434cd75-9507-44a9-8c2e-b23c7076ae39"
@@ -48,18 +46,15 @@ export default function Contact() {
         <Box
           m="auto"
           w={["100%", "90%", "70%", "70%"]}
-        bg="black"
-        boxShadow ="rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset"
-        p="10px"
+          bg="black"
+          boxShadow="rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset"
+          p="10px"
           borderRadius="lg"
         >
           <Box m={5} color="#0B0E3F">
-            <VStack  color={"white"}  spacing={3}>
+            <VStack color={"white"} spacing={3}>
               <FormControl id="name">
-                <FormLabel
-                  fontSize={["16px", "18px", "20px", "20px"]}
-                  
-                >
+                <FormLabel fontSize={["16px", "18px", "20px", "20px"]}>
                   Your Name
                 </FormLabel>
                 <InputGroup borderColor="blue.500">
@@ -71,10 +66,7 @@ export default function Contact() {
                 </InputGroup>
               </FormControl>
               <FormControl id="name">
-                <FormLabel
-                  fontSize={["16px", "18px", "20px", "20px"]}
-                  
-                >
+                <FormLabel fontSize={["16px", "18px", "20px", "20px"]}>
                   Mail
                 </FormLabel>
                 <InputGroup borderColor="blue.500">
@@ -86,10 +78,7 @@ export default function Contact() {
                 </InputGroup>
               </FormControl>
               <FormControl id="name">
-                <FormLabel
-                  fontSize={["16px", "18px", "20px", "20px"]}
-                  
-                >
+                <FormLabel fontSize={["16px", "18px", "20px", "20px"]}>
                   Message
                 </FormLabel>
                 <Textarea
@@ -102,11 +91,7 @@ export default function Contact() {
                 />
               </FormControl>
               <FormControl id="name" float="right">
-                <Button
-                  type="submit"
-                  className="btn-5"
-                  color={"black"}
-                >
+                <Button type="submit" className="btn-5" color={"black"}>
                   Send Message
                 </Button>
               </FormControl>
@@ -124,19 +109,15 @@ export default function Contact() {
         mt="-60px"
       >
         <GridItem colSpan={1}>
-          <Flex marginTop="80px" color={"lightgreen"}  justify={"center"} gap={8}>
+          <Flex marginTop="80px" color={"white"} justify={"center"} gap={8}>
             <Box>
               <a href="https://github.com/nileshsingh72" target="_blank">
-                <BsGithub
-                  fontSize={"30px"}
-                />
+                <BsGithub fontSize={"30px"} />
               </a>
             </Box>
             <Box>
               <a href="mailto: rnileshchauhan89@gmail.com" target="_blank">
-                <HiMail
-                  fontSize={"30px"}
-                />
+                <HiMail fontSize={"30px"} />
               </a>
             </Box>
             <Box>
@@ -144,14 +125,12 @@ export default function Contact() {
                 href="https://www.linkedin.com/in/nileshsingh99/"
                 target="_blank"
               >
-                <BsLinkedin
-                  fontSize={"30px"}
-                />
+                <BsLinkedin fontSize={"30px"} />
               </a>
             </Box>
           </Flex>
         </GridItem>
-        <GridItem color={"lightgreen"}   textShadow="1px 2px black" colSpan={1}>
+        <GridItem color={"white"} textShadow="1px 2px black" colSpan={1}>
           <Flex flexDirection={"column"} justify={"center"}>
             <Text
               textAlign={"center"}

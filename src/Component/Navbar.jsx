@@ -3,10 +3,10 @@ import {
   Flex,
   HStack,
   IconButton,
-  Button,
   useDisclosure,
   Stack,
   Avatar,
+  Text,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, AddIcon } from "@chakra-ui/icons";
 import { Link } from "react-scroll";
@@ -17,7 +17,7 @@ const Links = [
     path: "home",
   },
   {
-    title: "About",
+    title: "About Me",
     path: "about",
   },
   {
@@ -42,7 +42,7 @@ export default function Navbar() {
   return (
     <>
       <Box
-      // className="navcol"
+        // className="navcol"
         bg="black"
         position="fixed"
         width={"100%"}
@@ -72,16 +72,6 @@ export default function Navbar() {
             paddingRight="25px"
           >
             <Link to="home" smooth={true} duration={1000}>
-              {/* <Image
-                src="https://txt.1001fonts.net/img/txt/dHRmLjcyLjAwMDAwMC5UbWxzWlhOby4w/allura.regular.webp"
-                alt="name"
-                width="70%"
-                height="70%"
-                borderRadius={"20%"}
-                paddingX={3}
-                paddingY={3}
-              /> */}
-              {/* <Avatar src="https://avatars.githubusercontent.com/u/107462262?v=4" /> */}
               <Avatar ml="25px" src="https://i.ibb.co/yWrWZT3/avatarme.png" />
             </Link>
             <HStack
@@ -92,36 +82,20 @@ export default function Navbar() {
               fontFamily={"sans-serif"}
               justifyContent="space-between"
               // border={"1px solid yellow"}
-              fontSize={{ base: "15px", md: "20px", lg: "25px" }}
+              fontSize={{ base: "15px", md: "20px", lg: "20px" }}
               display={{ base: "none", md: "flex" }}
             >
               {Links.map((link) => (
-                <Link smooth={true}
-                color = "white"
-                duration={500} to={link.path}>
-                  {/* <Button
-                    className={styles.btn}
-                    key={link.path}
-                      
-
-                    bg="none"
-                    fontSize={{
-                      base: "10px",
-                      sm: "10px",
-                      md: "17px",
-                      lg: "20px",
-                    }}
-                    // _hover={{
-                    //   fontSize: "25px",
-                    //   wordSpacing: "10px",
-                    // }}
-                    border={"1px solid grey"}
-                  > */}
-                    {link.title}
-                  {/* </Button> */}
+                <Link smooth={true} color="white" duration={500} to={link.path}>
+                  <Text _hover={{ color: "#81E6D9" }}>{link.title}</Text>
                 </Link>
-                // </Button>
               ))}
+              <a
+                target={"_blank"}
+                href="https://drive.google.com/drive/my-drive"
+              >
+                Resume
+              </a>
             </HStack>
           </HStack>
           <Flex alignItems={"start"}></Flex>

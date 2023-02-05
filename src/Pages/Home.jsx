@@ -1,8 +1,7 @@
 import { Flex, Box, Text, Image, Link, Button } from "@chakra-ui/react";
 import styles from "../moduleCss/Home.module.css";
-import Resume from "../assets/Nilesh_Singh_Chauhan_Resume.pdf";
-import { FiDownload } from "react-icons/fi";
 import { Typewriter } from "react-simple-typewriter";
+import { resume } from "../posters";
 export default function Home() {
   const text = Typewriter({
     words: [
@@ -14,9 +13,7 @@ export default function Home() {
   });
 
   return (
-    <Box 
-    w="100%"
-    >
+    <Box w="100%">
       <Flex
         minH={["auto", "auto", "70vh", "70vh"]}
         alignContent="center"
@@ -24,10 +21,8 @@ export default function Home() {
         id="home"
         w={["80%", "70%", "70%", "80%"]}
         m="auto"
-            color={"white"}
-
+        color={"white"}
         flexDirection={["column", "column", "column", "row"]}
-       
       >
         <Flex
           py="17%"
@@ -35,7 +30,6 @@ export default function Home() {
           w={["100%", "100%", "100%", "56%"]}
           px="10px"
           alignItems={"center"}
-          // border="1px solid red"
           fontFamily={"Franklin Gothic Medium"}
           flexDirection={"column"}
           gap={["12px", "16px", "18px", "25px"]}
@@ -43,7 +37,6 @@ export default function Home() {
           <Text
             mt={["15px", "0px", "0px", "0px"]}
             textAlign={"left"}
-            // color={"#9B2C2C"}
             fontSize={["22px", "28px", "33px"]}
           >
             Hii,{" "}
@@ -51,7 +44,6 @@ export default function Home() {
           <Text
             textAlign={"center"}
             fontSize={["20px", "26px", "40px"]}
-            // color={"#9B2C2C"}
             color={"white"}
           >
             Nilesh Singh Chauhan
@@ -84,11 +76,14 @@ export default function Home() {
                 fontSize: "26px",
               }}
               fontSize={["14px", "18px", "22px", "22px"]}
-              // color={"blackAlpha.800"}
               bg="#FC8181"
             >
-              My Resume
-              <FiDownload />
+              <a
+                href={`${resume}`}
+                download={"Nilesh-Singh-Chauhan-Resume.pdf"}
+              >
+                My Resume
+              </a>
             </Flex>
           </Link>
         </Flex>
@@ -96,7 +91,6 @@ export default function Home() {
           w={["100%", "100%", "100%", "44%"]}
           justifyContent={"center"}
           alignItems="center"
-          // border="1px solid brown"
         >
           <Image src="https://i.ibb.co/18jVdfy/web-development-4518781-3743936.gif" />
         </Flex>

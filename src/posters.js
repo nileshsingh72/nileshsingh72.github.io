@@ -2,6 +2,14 @@ import Expedia from "./assets/expediaposterfinal.png";
 import indianexpress from "./assets/indianexpressposterfinal.png";
 import indeed from "./assets/indeedposterfinal.png";
 import activitytrackerposter from "./assets/activitytrackerposter.png";
-import weatherposter from "./assets/weatherposter.png";
+import elegant from "./assets/elegant.png";
+import resume from "./assets/Nilesh-Singh-Chauhan-Resume.pdf";
 
-export { Expedia, indianexpress, indeed  , activitytrackerposter , weatherposter};
+export {
+  Expedia,
+  indianexpress,
+  indeed,
+  activitytrackerposter,
+  elegant,
+  resume,
+};
