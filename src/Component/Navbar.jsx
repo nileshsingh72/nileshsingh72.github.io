@@ -103,13 +103,9 @@ export default function Navbar() {
 
         {isOpen ? (
           <Box pb={4} display={{ md: "none" }}>
-            <Stack as={"nav"} spacing={4}>
+            <Stack color="white" textAlign={"center"} as={"nav"} spacing={4}>
               {Links.map((link) => (
-                <Link
-                  color="white"
-                  onClick={isOpen ? onClose : onOpen}
-                  to={link.path}
-                >
+                <Link onClick={isOpen ? onClose : onOpen} to={link.path}>
                   {link.title}
                 </Link>
               ))}
