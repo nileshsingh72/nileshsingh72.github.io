@@ -90,12 +90,12 @@ export default function Navbar() {
                   <Text _hover={{ color: "#81E6D9" }}>{link.title}</Text>
                 </Link>
               ))}
-              <a
+               <a
                 target={"_blank"}
-                href="https://drive.google.com/drive/my-drive"
+                href="https://drive.google.com/file/d/1w6jiTbVq_pW5FChdW-5qkNRsvZHzk9fM/view?usp=drive_link"
               >
                 Resume
-              </a>
+              </a>  
             </HStack>
           </HStack>
           <Flex alignItems={"start"}></Flex>
